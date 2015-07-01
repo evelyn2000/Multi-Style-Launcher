@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:launcher="http://schemas.android.com/apk/res/com.android.qshome"
+	android:id="@+id/all_app_layout_main_ics"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black"
+    >
+	<!--     tab -->
+    <LinearLayout 
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="60dip"
+	    >
+	    
+    	<TextView android:id="@+id/ics_title_tab_show_all_apps"
+    		android:textSize="18sp"
+	    	android:layout_width="wrap_content"
+		    android:layout_height="0dip"
+		    android:layout_weight="1"
+		    android:text="@string/group_applications"
+		    android:background="@drawable/zzzz_ics_tab_widget_indicator_selector"
+		    android:textColor="@android:color/white"
+        	android:singleLine="true"
+        	android:gravity="center"
+        	android:paddingLeft="20dip"
+        	android:paddingRight="20dip"/>
+        	
+<!--         <TextView android:id="@+id/ics_title_tab_show_widget" -->
+<!-- 	    	android:layout_width="wrap_content" -->
+<!-- 		    android:layout_height="fill_parent" -->
+<!-- 		    android:text="@string/group_widgets" -->
+<!-- 		    android:background="@drawable/zzzz_ics_tab_widget_indicator_selector" -->
+<!--         	android:singleLine="true" -->
+<!--         	android:gravity="center" -->
+<!--         	android:paddingLeft="10dip" -->
+<!--         	android:paddingRight="10dip"/> -->
+        <View android:id="@+id/ics_title_tab_show_all_apps"
+    		android:layout_width="fill_parent"
+		    android:layout_height="1dip"
+		    android:background="@drawable/zzzz_ics_tab_selected_holo_bg"
+			/>
+    </LinearLayout>
+    
+	<com.android.qshome.ctrl.AllAppsGridLayoutPages
+		android:id="@+id/all_app_grid_pages"
+		android:layout_width="match_parent"
+	    android:layout_height="0dip"
+	    android:layout_weight="1"
+	    launcher:shortcut_layout="@layout/application_boxed_ics"
+	    launcher:page_layout="@layout/page_grid_layout"
+	    launcher:defaultScreen="0"
+	    >
+	    
+	    <include layout="@layout/page_grid_layout" />
+	    
+	</com.android.qshome.ctrl.AllAppsGridLayoutPages>
+	
+	<com.android.qshome.ctrl.QsScrollbar
+		android:id="@+id/screen_indicator"
+		android:layout_width="fill_parent"
+		android:layout_height="7dip"
+		android:layout_gravity="bottom"
+		launcher:scrollbarThumbImage="@drawable/zzzz_hotseat_scrubber_holo"
+		launcher:direction="horizontal"
+		launcher:autoHideThumb="5"
+		/> 
+</LinearLayout>

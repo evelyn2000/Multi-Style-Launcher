@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="config_allAppsFadeInTime">200</integer>
+    <integer name="config_allAppsFadeOutTime">200</integer>
+    <integer name="config_allAppsBatchLoadDelay">0</integer>
+    <integer name="config_allAppsBatchSize">0</integer>
+    
+    <!--   style for android ics start -->
+    <!-- The transition duration for the background of the drop targets -->
+    <integer name="config_dropTargetBgTransitionDuration">100</integer>
+    <bool name="config_useDropTargetDownTransition">true</bool>
+    <!--  When dragging an item on the workspace, how much bigger (in pixels) the dragged view
+          should be, as compared to the original view. If 0, it will not be scaled at all.
+          Should be an even number, for pixel alignment. -->
+    <integer name="config_dragViewExtraPixels">40</integer>
+    <!--     android ics end -->
+    
+    
+
+</resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+	xmlns:launcher="http://schemas.android.com/apk/res/com.android.qshome"
+	android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    
+   <View android:id="@+id/screen_bar_divider"
+   		android:layout_width="7dip"
+		android:layout_height="fill_parent"
+		android:layout_gravity="right"
+		android:layout_marginTop="5dip"
+		android:layout_marginBottom="5dip"
+		android:layout_marginRight="@dimen/scrollbar_mergebottom_droidics"
+		android:background="@drawable/zzzz_hotseat_track_holo"/>
+    
+   <com.android.qshome.ctrl.QsScrollbar
+		android:id="@+id/screen_indicator"
+		android:layout_width="fill_parent"
+		android:layout_height="7dip"
+		android:layout_gravity="bottom"
+		android:layout_marginRight="@dimen/scrollbar_mergebottom_droidics"
+		android:layout_marginLeft="@dimen/qsb_bar_height"
+		launcher:scrollbarThumbImage="@drawable/zzzz_hotseat_scrubber_holo"
+		launcher:direction="horizontal"
+		launcher:autoHideThumb="3"
+		/>
+		
+	<!-- 	The workspace contains 5 screens of cells	 -->
+    <com.android.qshome.ctrl.Workspace
+        android:id="@+id/workspace"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        launcher:shortcut_layout="@layout/application_boxed_ics_workspace"
+        launcher:defaultScreen="2"
+        launcher:container="CONTAINER_DESKTOP">
+
+        <include android:id="@+id/cell1" layout="@layout/workspace_screen_droidics" />
+        <include android:id="@+id/cell2" layout="@layout/workspace_screen_droidics" />
+        <include android:id="@+id/cell3" layout="@layout/workspace_screen_droidics" />
+        <include android:id="@+id/cell4" layout="@layout/workspace_screen_droidics" />
+        <include android:id="@+id/cell5" layout="@layout/workspace_screen_droidics" />
+                
+    </com.android.qshome.ctrl.Workspace>
+    
+	<include
+        android:id="@+id/qsb_bar"
+        layout="@layout/ics_qsb_bar" />
+        
+<!--     <include layout="@layout/ics_bottom_bar" /> -->
+        
+   <LinearLayout
+        android:layout_width="@dimen/button_bar_height_droidics"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:orientation="horizontal"
+        android:gravity="right"
+        >
+
+		<com.android.qshome.ctrl.CellLayoutWithDrag
+		    android:id="@+id/all_apps_button_cluster" 
+		
+		    android:layout_width="@dimen/scrollbar_mergebottom_droidics"
+		    android:layout_height="match_parent"
+		    android:hapticFeedbackEnabled="false"
+		
+		    launcher:cellWidth="@dimen/droidics_hotset_cell_width"
+		    launcher:cellHeight="@dimen/droidics_hotset_cell_height"
+		    launcher:longAxisStartPadding="0dip"
+		    launcher:longAxisEndPadding="0dip"
+		    launcher:shortAxisStartPadding="0dip"
+		    launcher:shortAxisEndPadding="0dip"
+		    launcher:shortAxisCells="5"
+		    launcher:longAxisCells="1"
+		    launcher:container="CONTAINER_HOTSET"
+		    launcher:shortcut_layout="@layout/hot_set_btn_item"/>
+		    
+    </LinearLayout>
+    
+
+
+</FrameLayout>

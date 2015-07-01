@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+
+<favorites xmlns:launcher="http://schemas.android.com/apk/res/com.android.qshome">
+    <!--  Far-left screen [0] -->
+
+
+<favorite 
+launcher:packageName="com.android.contacts" 
+launcher:className="com.android.contacts.DialtactsActivity" 
+launcher:screen="0" 
+launcher:x="0" 
+launcher:y="0" 
+launcher:container="CONTAINER_HOTSET" 
+/>
+
+<favorite 
+launcher:packageName="com.android.contacts" 
+launcher:className="com.android.contacts.DialtactsContactsEntryActivity" 
+launcher:screen="0" 
+launcher:x="1" 
+launcher:y="0" 
+launcher:container="CONTAINER_HOTSET" 
+/>
+
+<qsfunc 
+launcher:qsFuncKey="show_hide_all_apps" 
+launcher:icon="@drawable/zzzz_all_apps_button_icon" 
+launcher:title="@string/all_apps_button_label" 
+launcher:screen="0" 
+launcher:x="2" 
+launcher:y="0" 
+launcher:qsExtParam="lock_item" 
+launcher:container="CONTAINER_HOTSET" 
+/>
+
+<favorite 
+launcher:packageName="com.android.mms" 
+launcher:className="com.android.mms.ui.ConversationList" 
+launcher:screen="0" 
+launcher:x="3" 
+launcher:y="0" 
+launcher:container="CONTAINER_HOTSET" 
+/>
+
+<favorite 
+launcher:packageName="com.android.browser" 
+launcher:className="com.android.browser.BrowserActivity" 
+launcher:screen="0" 
+launcher:x="4" 
+launcher:y="0" 
+launcher:qsExtParam="app_hot_sets" 
+launcher:container="CONTAINER_HOTSET" 
+/>
+
+</favorites>
+

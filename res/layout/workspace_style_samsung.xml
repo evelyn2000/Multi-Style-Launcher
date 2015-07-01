@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+	xmlns:launcher="http://schemas.android.com/apk/res/com.android.qshome"
+	android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+	<!-- The workspace contains 5 screens of cells -->
+    <com.android.qshome.ctrl.Workspace
+        android:id="@+id/workspace"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        launcher:shortcut_layout="@layout/application_samsung"
+        launcher:defaultScreen="2">
+
+        <include android:id="@+id/cell1" layout="@layout/workspace_screen_samsung" />
+        <include android:id="@+id/cell2" layout="@layout/workspace_screen_samsung" />
+        <include android:id="@+id/cell3" layout="@layout/workspace_screen_samsung" />
+        <include android:id="@+id/cell4" layout="@layout/workspace_screen_samsung" />
+        <include android:id="@+id/cell5" layout="@layout/workspace_screen_samsung" />
+                
+    </com.android.qshome.ctrl.Workspace>
+    
+	<com.android.qshome.ctrl.QsScreenIndicator
+		android:id="@+id/screen_indicator"
+		android:layout_width="fill_parent"
+		android:layout_height="25dip"
+		android:layout_gravity="bottom"
+		android:layout_marginBottom="@dimen/button_bar_height_samsung"
+		launcher:curScreenImage="@drawable/zzz_samsung_menu_homescreen_menu_page_focus_middle"
+		launcher:defaultScreenImage="@drawable/zzz_samsung_menu_homescreen_menu_page_focus_small"
+		launcher:moreScreenImage="@drawable/zzz_samsung_menu_homescreen_menu_page_more"
+		launcher:direction="horizontal"
+		launcher:imagePadding="2dip"
+		launcher:isCreateNumber="true"
+		launcher:textSize="12sp"
+		launcher:textColor="#000000"
+		/> 
+		
+    <com.android.qshome.ctrl.DeleteZone
+		android:id="@+id/delete_zone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        android:src="@drawable/zzz_samsung_icon_del"
+        android:background="@drawable/zzz_samsung_delete_zone_selector"
+        android:layout_gravity="bottom|center_horizontal"
+        android:visibility="invisible"
+        launcher:direction="horizontal"
+        launcher:transition_background="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/all_apps_button_cluster"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/button_bar_height_samsung"
+        android:layout_gravity="bottom|center_horizontal"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/zzz_samsung_menu_mainmenu_bg"
+        >
+
+        <TextView android:id="@+id/button_phone"
+	        android:layout_width="0dip"
+ 			android:layout_height="wrap_content"
+
+		    android:paddingLeft="2dip"
+		    android:paddingRight="2dip"
+		    android:paddingTop="5dip"
+		    android:paddingBottom="2dip"
+		    android:drawablePadding="0dip"
+		        
+		    android:textSize="13dip"
+		    android:singleLine="true"
+		    android:ellipsize="marquee"
+		    android:fadingEdge="horizontal"
+		    android:textColor="#FFF"
+		    android:gravity="center"
+		    android:drawableTop="@drawable/zzz_samsung_btn_phone"
+ 			android:layout_weight="1.0"/>
+ 			
+ 		<TextView android:id="@+id/button_contacts"
+ 			android:layout_width="0dip"
+		    android:layout_height="wrap_content"
+
+		    android:paddingLeft="2dip"
+		    android:paddingRight="2dip"
+		    android:paddingTop="5dip"
+		    android:paddingBottom="2dip"
+		    android:drawablePadding="0dip"
+		        
+		    android:textSize="13dip"
+		    android:singleLine="true"
+		    android:ellipsize="marquee"
+		    android:fadingEdge="horizontal"
+		    android:textColor="#FFF"
+		    android:gravity="center"
+		    android:drawableTop="@drawable/zzz_samsung_btn_contacts"
+ 			android:layout_weight="1.0"/>
+ 			
+ 		<TextView android:id="@+id/button_sms"
+ 			android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+
+		    android:paddingLeft="2dip"
+		    android:paddingRight="2dip"
+		    android:paddingTop="5dip"
+		    android:paddingBottom="2dip"
+		    android:drawablePadding="0dip"
+		        
+		    android:textSize="13dip"
+		    android:singleLine="true"
+		    android:ellipsize="marquee"
+		    android:fadingEdge="horizontal"
+		    android:textColor="#FFF"
+		    android:gravity="center"
+		    android:drawableTop="@drawable/zzz_samsung_btn_sms"
+ 			android:layout_weight="1.0"/>
+ 			
+ 		<TextView android:id="@+id/button_all_apps"
+ 			android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+
+		    android:paddingLeft="2dip"
+		    android:paddingRight="2dip"
+		    android:paddingTop="5dip"
+		    android:paddingBottom="2dip"
+		    android:drawablePadding="0dip"
+		        
+		    android:textSize="13dip"
+		    android:singleLine="true"
+		    android:ellipsize="marquee"
+		    android:fadingEdge="horizontal"
+		    android:textColor="#FFF"
+		    android:gravity="center"
+		    android:drawableTop="@drawable/zzz_samsung_btn_apps"
+ 			android:layout_weight="1.0"/>
+
+    </LinearLayout>
+</FrameLayout>

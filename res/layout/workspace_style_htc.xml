@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+	xmlns:launcher="http://schemas.android.com/apk/res/com.android.qshome"
+	android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+	<!-- The workspace contains 5 screens of cells -->
+    <com.android.qshome.ctrl.Workspace
+        android:id="@+id/workspace"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        launcher:defaultScreen="2">
+
+        <include android:id="@+id/cell1" layout="@layout/workspace_screen" />
+        <include android:id="@+id/cell2" layout="@layout/workspace_screen" />
+        <include android:id="@+id/cell3" layout="@layout/workspace_screen" />
+        <include android:id="@+id/cell4" layout="@layout/workspace_screen" />
+        <include android:id="@+id/cell5" layout="@layout/workspace_screen" />
+                
+    </com.android.qshome.ctrl.Workspace>
+    
+    <SlidingDrawer
+        android:id="@+id/drawer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:topOffset="0dip"
+        android:bottomOffset="4dip"
+        android:handle="@+id/zz_htc_all_apps_handle"
+        android:content="@+id/content"
+        android:visibility="invisible">
+
+ 		<Button
+            android:id="@id/zz_htc_all_apps_handle"
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+
+            android:background="@drawable/zz_htc_tray_handle"
+
+            android:focusable="true"
+            android:clickable="true"
+
+			android:text="@string/group_applications"
+			android:textSize="18sp"
+			android:textColor="@android:color/white" 
+			android:gravity="center" 
+            launcher:direction="horizontal" />
+
+        <com.android.qshome.ctrl.AllAppsGridView
+            android:id="@id/content"
+            android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+
+            launcher:texture="@drawable/zz_htc_pattern_carbon_fiber_dark"
+			android:scrollbars="none"
+
+            android:drawSelectorOnTop="false"
+            android:listSelector="@drawable/grid_selector"
+
+            android:nextFocusDown="@null"
+	        android:nextFocusUp="@null"
+	        android:nextFocusLeft="@null"
+	        android:nextFocusRight="@null"
+
+            android:verticalSpacing="0dip"
+            android:numColumns="4" 
+            android:layout_marginBottom="0dip"
+            android:paddingBottom="50dip" 
+            android:fadingEdge="none" 
+            />
+
+    </SlidingDrawer>
+    
+	<com.android.qshome.ctrl.DeleteZone
+		android:id="@+id/delete_zone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        android:src="@drawable/ic_delete"
+        android:background="@drawable/zz_htc_delete_zone_selector"
+        android:layout_gravity="bottom|center_horizontal"
+        android:visibility="invisible"
+        launcher:direction="horizontal"
+        launcher:transition_background="true"
+        />
+        
+	<FrameLayout
+	    android:id="@+id/layoutbottomall"
+        android:layout_width="fill_parent"
+        android:layout_height="66dip"
+        android:layout_gravity="bottom"
+        >
+        
+        <com.android.qshome.ctrl.QsScrollbar
+		android:id="@+id/pageturn_scrollbar"
+		android:layout_width="fill_parent"
+		android:layout_height="66dip"
+		android:layout_gravity="bottom"
+		launcher:scrollbarThumbImage="@drawable/zz_htc_hud_pageturn_foreground"
+		launcher:direction="horizontal"
+		android:background="@drawable/zz_htc_hud_pageturn_background"
+		/> 
+			
+		<LinearLayout
+		    android:id="@+id/layoutthreebtn"
+	        android:orientation="horizontal"
+	        android:layout_width="fill_parent"
+	        android:layout_height="60dip"
+	        android:layout_gravity="bottom"
+	        >
+	       <ImageButton
+	           android:id="@+id/btnhandle"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:background="@drawable/zz_htc_hudhandle"
+	           android:src="@drawable/zz_htc_hud_tray_handle_up"
+	           />
+	       <Button
+	           android:id="@+id/btndial"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:state_enabled="true"
+		       android:textStyle="bold"
+		       android:textSize="22sp"
+		       android:textColor="@android:color/white"
+	           android:background="@drawable/zz_htc_huddial"
+	           android:drawableLeft="@drawable/zz_htc_hud_tray_dial"
+	           android:text="@string/zz_htc_dial_handle_text"
+	           android:paddingLeft="15dip"
+	           android:gravity="center"
+	           />
+	       <ImageButton
+	           android:id="@+id/btnadd"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:background="@drawable/zz_htc_hudadd"
+	           android:src="@drawable/zz_htc_ic_internet"
+	           />
+	    </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

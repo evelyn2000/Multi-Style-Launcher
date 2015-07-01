@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:launcher="http://schemas.android.com/apk/res/com.android.qshome"
+	android:id="@+id/all_app_layout_main_ics"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingRight="@dimen/button_bar_height_samsung"
+    android:background="#c8000000"
+    >
+    
+    
+
+	<com.android.qshome.ctrl.AllAppsGridLayoutPages
+		android:id="@+id/all_app_grid_pages"
+		android:layout_width="0dip"
+	    android:layout_height="match_parent"
+	    android:layout_weight="1"
+	    launcher:shortcut_layout="@layout/application_boxed_samsung"
+	    launcher:page_layout="@layout/page_grid_layout_samsung"
+	    launcher:defaultScreen="0"
+	    >
+	    
+	    <include layout="@layout/page_grid_layout_samsung" />
+	    
+	</com.android.qshome.ctrl.AllAppsGridLayoutPages>
+	
+	<com.android.qshome.ctrl.QsScreenIndicator
+		android:id="@+id/all_app_screen_indicator"
+		android:layout_width="25dip"
+		android:layout_height="fill_parent"
+		launcher:curScreenImage="@drawable/zzz_samsung_menu_homescreen_menu_page_focus_middle"
+		launcher:defaultScreenImage="@drawable/zzz_samsung_menu_homescreen_menu_page_focus_small"
+		launcher:moreScreenImage="@drawable/zzz_samsung_menu_homescreen_menu_page_more"
+		launcher:direction="vertical"
+		launcher:imagePadding="1dip"
+		launcher:isCreateNumber="true"
+		launcher:textSize="12sp"
+		launcher:textColor="#000000"
+		/> 
+</LinearLayout>
